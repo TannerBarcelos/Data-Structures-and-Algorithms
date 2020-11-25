@@ -24,8 +24,9 @@ I am making this repository to help students, self-taught developers and anyone 
 - [Heap](https://www.geeksforgeeks.org/heap-data-structure/)
 - [Graphs](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 
-- For each link above, I will have corresponding directories in this repository with source files in JavaScript along with notes on Big O notation for the common operations on each of these data structures.
-- I will also provide a link to a YouTube video as they publish
+For each link above, I will have corresponding directories in this repository with source files in JavaScript along with notes on Big O notation for the common operations on each of these data structures.
+
+I will also provide a link to a YouTube video as they publish
 
 ### Algorithms
 
