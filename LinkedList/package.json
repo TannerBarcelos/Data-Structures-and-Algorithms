@@ -1,0 +1,15 @@
+{
+  "name": "LinkedList",
+  "version": "1.0.0",
+  "description": "Linked List Implementation",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
