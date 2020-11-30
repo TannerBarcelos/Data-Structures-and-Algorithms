@@ -26,11 +26,11 @@ class LinkedList {
       if (this.head.data === data) {
         this.head = this.head.next;
       }
-      let currentNode = this.head;
-      while (currentNode.next) {
-        currentNode = currentNode.next;
+      let curr = this.head;
+      while (curr.next) {
+        curr = curr.next;
       }
-      currentNode.next = newNode;
+      curr.next = newNode;
     }
   };
 
@@ -112,77 +112,56 @@ class LinkedList {
    *    Time:
    *    Best Case: O(1) if list is empty
    *    Avg Case: O(N)
-   *    @param data | data to be inserted into the linked list in ascending sorted order
-   */
-  insertSorted = (data) => {
-    this.size++;
-    let newNode = new Node(data);
-    if (!this.head) {
-      this.insertFront(data);
-    }
-    if (this.head.data > data) {
-      newNode.next = this.head;
-      this.head = newNode;
-    }
-
-    let previous = null;
-    let curr = this.head;
-
-    // traverse while not at the end of the list
-    while (curr.next) {
-      // If the current value is no longer < data to insert, this is the insert position
-      if (curr.data > data) {
-        previous.next = newNode;
-        newNode.next = curr;
-        break;
-      }
-      previous = curr;
-      curr = curr.next;
-    }
-    if (!curr.next) {
-      this.insertBack(data);
-    }
-    return this;
-  };
-
-  /**
-   *    Time:
-   *    Best Case: O(1) if list is empty
-   *    Avg Case: O(N)
    *    @param data | data to be inserted into the linked list @ pos
    */
   insert = (pos, data) => {
     if (pos > this.size || pos < 0) return 'Insert position out of range';
-    let newNode = new Node(data);
 
-    // Position is 0 so insert at front of the list
+    // If pos is == to the size of the list, push on
+    if (pos === this.size) {
+      this.push(data);
+      return this;
+    }
+
+    // If pos is == 0, insert at the front
     if (pos === 0) {
       this.insertFront(data);
-      this.size++;
       return this;
     }
-
-    // Position is length of list so insert at the back
-    if (pos === this.size) {
-      this.insertBack(data);
-      this.size++;
-      return this;
-    }
-
-    // Position is somewhere between (0, ll.size)
-    let previous = null;
-    let curr = this.head;
-    let count = 0;
-    while (count < pos && curr.next) {
-      count++;
-      previous = curr;
+    // Else, it is to be inserted between the (front and end), so we find that position simply with a counter
+    let newNode = new Node(data);
+    let curr = this.head.next;
+    let temp = this.head;
+    let count = 1;
+    while (count < pos) {
+      temp = curr;
       curr = curr.next;
+      count++;
     }
-    previous.next = newNode;
+    temp.next = newNode;
     newNode.next = curr;
+  };
 
-    this.size++;
-    return this;
+  /**
+   *    Time:
+   *    Best Case: O(1) if list is empty or item is at front
+   *    Avg Case: O(N)
+   *    @desc | gets an element by "index position"
+   */
+  get = (pos) => {
+    // if the pos is out of range
+    if (pos < 0 || pos > this.size) {
+      return null;
+    }
+
+    // Find the value at the position
+    let index = 0;
+    let curr = this.head;
+    while (index !== pos) {
+      curr = curr.next;
+      index++;
+    }
+    return curr.data;
   };
 
   /**
@@ -218,7 +197,11 @@ LL.push(10);
 LL.push(20);
 LL.push(50);
 LL.push(-4);
-console.log(LL);
-console.log(LL.insert(2, 4));
-LL.insertBack(101);
+LL.insert(0, 100);
+LL.remove(50);
+console.log(LL.get(2));
+LL.remove(10);
+LL.remove(20);
+LL.remove(100);
+LL.remove(-4);
 LL.print();
