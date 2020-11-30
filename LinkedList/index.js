@@ -95,10 +95,10 @@ class LinkedList {
    */
   insertBack = (data) => {
     this.size++;
+    let newNode = new Node(data);
     if (!this.head) {
-      this.head = new Node(data);
+      this.head = newNode;
     } else {
-      let newNode = new Node(data);
       let curr = this.head;
       while (curr.next) {
         curr = curr.next;
@@ -142,7 +142,6 @@ class LinkedList {
     if (!curr.next) {
       this.insertBack(data);
     }
-
     return this;
   };
 
