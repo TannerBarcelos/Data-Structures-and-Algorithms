@@ -204,7 +204,4 @@ LL.insert(0, 100);
 LL.remove(50);
 console.log(LL.get(2));
 LL.remove(10);
-LL.remove(20);
-LL.remove(100);
-LL.remove(-4);
 LL.print();
