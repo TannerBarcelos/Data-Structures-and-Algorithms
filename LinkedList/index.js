@@ -120,15 +120,18 @@ class LinkedList {
     // If pos is == to the size of the list, push on
     if (pos === this.size) {
       this.push(data);
+      this.size++;
       return this;
     }
 
     // If pos is == 0, insert at the front
     if (pos === 0) {
       this.insertFront(data);
+      this.size++;
       return this;
     }
     // Else, it is to be inserted between the (front and end), so we find that position simply with a counter
+    this.size++;
     let newNode = new Node(data);
     let curr = this.head.next;
     let temp = this.head;
