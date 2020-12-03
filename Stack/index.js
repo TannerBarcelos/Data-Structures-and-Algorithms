@@ -16,7 +16,7 @@ class Stack {
   };
 
   peek = () => {
-    return this.data[-1];
+    return this.data[this.size - 1];
   };
 
   isEmpty = () => {
