@@ -18,6 +18,7 @@
 - print => O(N)
 - clear => O(1)
 
+- one thing you might notice is we are using the array to imitate the stack and we use the builtin methods with arrays that are named / do the same things? That is because JavaScript is amazing and does all the Queue / Stack operations for us!
 - As you can see, stacks are very efficient and provide constant time lookup for almost every operation!
 
 [Here](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) is a good article about stacks

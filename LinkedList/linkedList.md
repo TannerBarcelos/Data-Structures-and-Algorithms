@@ -9,8 +9,8 @@
 
 ### What is a 'Node' again?
 
-Here is a good diagram
-![Here is a good diagram of what a node is](./Diagrams/Node_Architecture.jpeg)
+Here is a good diagram<br>
+![Here is a good diagram of what a node is](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/816px-Singly-linked-list.svg.png)
 
 - As seen, we can diagram this idea of a node as a rectange with two boxes in it. One containing some data (Number, String, another object, you name it!) and a pointer to the next node in the list
 - The thing to remember is, these nodes are just objects that will exist in memory that are linked together using pointers which are simply references to other memory locations which house that next node
@@ -21,6 +21,15 @@ Here is a good diagram
 - The nice thing about JavaScript though is that arrays are also very flexible with memory unlike C++ where you need to allocate N bytes of memory and then re-allocate and extend if needed. Javascript does that under the hood which essentially does what a linked list offers!
 
 ### Operations and their Big O Time Complexity
+
+- push => Best Case: O(1) [if list is empty]. Average Case O(N) [unless tracking tail]
+- remove => Best Case: O(1) [if list is length 1] . Average Case O(N)
+- insertFront => O(1)
+- insertBack => Best Case O(1) [empty list] . Average Case O(N)
+- insert => Best Case O(1) [list is empty] . Average Case O(N)
+- get => Best Case O(1) [empty list or length 1] . Average Case O(N)
+- print => Best Case O(1) [list is empty or length 1] . Average Case O(N)
+- length => O(1)
 
 ### Use Cases
 
