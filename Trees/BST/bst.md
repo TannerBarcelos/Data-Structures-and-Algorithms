@@ -1,6 +1,7 @@
 # Binary Search Trees
 
 [See Wikipedia](https://en.wikipedia.org/wiki/Binary_search_tree)
+[similar code](https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/)
 
 ![bst](../img/bst.png)
 
