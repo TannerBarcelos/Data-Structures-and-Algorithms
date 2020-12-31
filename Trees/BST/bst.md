@@ -19,7 +19,52 @@
 - Like binary search, since the tree is ordered with the same properties, searchng insertion and deletion actually also have the same time complexity as the divide and conquer approach workss on a sorted collection
 - Each item we compare / process will cut the tree search space in half since we have a strict ordering paradigm in the BST. This 'cut-in-half' at a lower level is the mathematical defintion of Logarithms which is why the time complexity is LogN where the number of comparisons to get some piece of data is roughly Log of N where N is the amount of nodes in the tree (e.g Log (8) === 3 <= 3 comparisons)
 
-- There are three powerful and popular search algorithms for BST called _inorder traversal_, _preorder traversal_ and _postorder traversal_. which we will have code for in index.js file!
+### The 3 powerful DFS algorithms
+
+- Can be used for printing, returning, comparing to a search key, etc.
+- See code in the index.js file
+
+##### In Order Traversal
+
+```text
+
+  /*
+   * If the current node (starting from root) is not null,
+   *    traverse down left
+   *    Process this node (in our case, print it out)
+   *    traverse down right
+   * else, do nothing
+   *
+   */
+```
+
+##### Pre Order Traversal
+
+```text
+
+  /*
+   * If the current node (starting from root) is not null,
+   *    Process this node (in our case, print it out)
+   *    traverse down left
+   *    traverse down right
+   * else, do nothing
+   *
+   */
+```
+
+##### Post Order Traversal
+
+```text
+
+  /*
+   * If the current node (starting from root) is not null,
+   *    traverse down left
+   *    traverse down right
+   *    Process this node (in our case, print it out)
+   * else, do nothing
+   *
+   */
+```
 
 <br>
 
